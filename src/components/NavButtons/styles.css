@@ -1,0 +1,17 @@
+.NavButtons {
+    padding: 1rem;
+    display: flex;
+    place-content: center;
+    gap: 1rem;
+}
+
+.NavButtons_button {
+    border: solid 1px black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.NavButtons_button:hover {
+    border-color: blue;
+    color: blue;
+}
