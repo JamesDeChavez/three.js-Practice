@@ -25,7 +25,7 @@ const NavButtons: React.FC<Props> = ({ RENDERS, setRender }) => {
                 className={`${className}_button`}
                 onClick={(e) => handleClick(e, 1)}
             >
-                Project Two
+                First Texture
             </button>
         </div>
     )
