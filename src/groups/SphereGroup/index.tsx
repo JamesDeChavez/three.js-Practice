@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import Sphere from '../../meshes/Sphere'
-import './styles.css'
 import { useFrame } from '@react-three/fiber'
 import { Group } from 'three'
 
