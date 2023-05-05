@@ -1,22 +1,24 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useTexture } from '@react-three/drei'
-import textTexture from '../../assets/uv-test-bw.png'
+import testTexture from '../../assets/uv-test-bw.png'
 import './styles.css'
 
 const FirstTexture = () => {
     const Cube = () => {
-        const texture = useTexture([textTexture])
+        const texture = useTexture({
+            map: testTexture
+        })
         return (
             <mesh rotation={[90, 0, 20]}>
                 <boxBufferGeometry args={[3, 3, 3]} />
-                <meshLambertMaterial color="blue" map={texture[0]} />
+                <meshLambertMaterial map={texture['map']} />
             </mesh>
         )
     }
     const className = 'FirstTexture'
     return(
         <div className={className}>
-            <h2 className={`${className}_header`}>Project Two</h2>
+            <h2 className={`${className}_header`}>First Texture</h2>
             <div className={`${className}_sceneContainer`}>
                 <Canvas className={`${className}_canvas`}>
                     <OrbitControls enableZoom={false} />
