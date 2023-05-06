@@ -39,6 +39,12 @@ const NavButtons: React.FC<Props> = ({ RENDERS, setRender }) => {
             >
                 Train
             </button>
+            <button 
+                className={`${className}_button`}
+                onClick={(e) => handleClick(e, 4)}
+            >
+                Birds
+            </button>
         </div>
     )
 }

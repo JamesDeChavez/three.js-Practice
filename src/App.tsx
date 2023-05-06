@@ -2,12 +2,14 @@ import { useState } from 'react'
 import NavButtons from './components/NavButtons'
 import HelloWorld from './components/HelloWorld'
 import FirstTexture from './components/FirstTexture'
-import './App.css'
 import MultipleObjects from './components/MultipleObjects'
 import TrainProject from './components/TrainProject'
+import BirdsProject from './components/BirdsProject'
+import './App.css'
+import { useGLTF } from '@react-three/drei'
 
 const App = () => {
-  const RENDERS = ['HELLO_WORLD', 'FIRST_TEXTURE', 'MULTIPLE_OBJECTS', 'TRAIN']
+  const RENDERS = ['HELLO_WORLD', 'FIRST_TEXTURE', 'MULTIPLE_OBJECTS', 'TRAIN', 'BIRDS']
   const [render, setRender] = useState(RENDERS[0])
   const className = 'App'
   return (
@@ -17,10 +19,13 @@ const App = () => {
         [RENDERS[0]]: <HelloWorld />,
         [RENDERS[1]]: <FirstTexture />,
         [RENDERS[2]]: <MultipleObjects />,
-        [RENDERS[3]]: <TrainProject />
+        [RENDERS[3]]: <TrainProject />,
+        [RENDERS[4]]: <BirdsProject />
       }[render]}
     </div>
   )
 }
+
+useGLTF.preload('/src/assets/Parrot.glb')
 
 export default App

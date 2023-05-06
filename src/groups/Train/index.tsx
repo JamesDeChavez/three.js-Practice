@@ -20,10 +20,11 @@ const Train = () => {
     return (
         <group ref={groupRef} >
             <TrainNose />
-            {wheels.map(wheel => {
+            {wheels.map((wheel, i) => {
                 return <TrainWheel  
                     x={wheel.x} y={wheel.y} z={wheel.z}
                     top={wheel.top} bot={wheel.bot} height={wheel.height}
+                    key={i}
                 />
             })}
             <TrainChimney />
