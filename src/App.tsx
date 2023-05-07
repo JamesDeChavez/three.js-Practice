@@ -7,9 +7,10 @@ import TrainProject from './components/TrainProject'
 import BirdsProject from './components/BirdsProject'
 import './App.css'
 import { useGLTF } from '@react-three/drei'
+import AllModels from './components/AllModels'
 
 const App = () => {
-  const RENDERS = ['HELLO_WORLD', 'FIRST_TEXTURE', 'MULTIPLE_OBJECTS', 'TRAIN', 'BIRDS']
+  const RENDERS = ['HELLO_WORLD', 'FIRST_TEXTURE', 'MULTIPLE_OBJECTS', 'TRAIN', 'BIRDS', 'ALL_MODELS']
   const [render, setRender] = useState(RENDERS[0])
   const className = 'App'
   return (
@@ -20,7 +21,8 @@ const App = () => {
         [RENDERS[1]]: <FirstTexture />,
         [RENDERS[2]]: <MultipleObjects />,
         [RENDERS[3]]: <TrainProject />,
-        [RENDERS[4]]: <BirdsProject />
+        [RENDERS[4]]: <BirdsProject />,
+        [RENDERS[5]]: <AllModels />
       }[render]}
     </div>
   )
