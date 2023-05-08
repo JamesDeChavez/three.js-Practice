@@ -5,13 +5,13 @@ import FirstTexture from './components/FirstTexture'
 import MultipleObjects from './components/MultipleObjects'
 import TrainProject from './components/TrainProject'
 import BirdsProject from './components/BirdsProject'
-import './App.css'
-import { useGLTF } from '@react-three/drei'
 import AllModels from './components/AllModels'
+import Pendelum from './components/Pendelum'
+import './App.css'
 
 const App = () => {
-  const RENDERS = ['HELLO_WORLD', 'FIRST_TEXTURE', 'MULTIPLE_OBJECTS', 'TRAIN', 'BIRDS', 'ALL_MODELS']
-  const [render, setRender] = useState(RENDERS[0])
+  const RENDERS = ['HELLO_WORLD', 'FIRST_TEXTURE', 'MULTIPLE_OBJECTS', 'TRAIN', 'BIRDS', 'ALL_MODELS', 'PENDELUM']
+  const [render, setRender] = useState(RENDERS[RENDERS.length - 1])
   const className = 'App'
   return (
     <div className={className}>
@@ -22,12 +22,11 @@ const App = () => {
         [RENDERS[2]]: <MultipleObjects />,
         [RENDERS[3]]: <TrainProject />,
         [RENDERS[4]]: <BirdsProject />,
-        [RENDERS[5]]: <AllModels />
+        [RENDERS[5]]: <AllModels />,
+        [RENDERS[6]]: <Pendelum />
       }[render]}
     </div>
   )
 }
-
-useGLTF.preload('/src/assets/Parrot.glb')
 
 export default App

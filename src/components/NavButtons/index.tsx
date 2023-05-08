@@ -17,27 +17,15 @@ const NavButtons: React.FC<Props> = ({ RENDERS, setRender }) => {
         <div className={className}>
             <button 
                 className={`${className}_button`}
-                onClick={(e) => handleClick(e, 0)}
+                onClick={(e) => handleClick(e, 6)}
             >
-                Hello World
+                Pendelum
             </button>
             <button 
                 className={`${className}_button`}
-                onClick={(e) => handleClick(e, 1)}
+                onClick={(e) => handleClick(e, 5)}
             >
-                First Texture
-            </button>
-            <button 
-                className={`${className}_button`}
-                onClick={(e) => handleClick(e, 2)}
-            >
-                Multiple Objects
-            </button>
-            <button 
-                className={`${className}_button`}
-                onClick={(e) => handleClick(e, 3)}
-            >
-                Train
+                All Models
             </button>
             <button 
                 className={`${className}_button`}
@@ -47,9 +35,27 @@ const NavButtons: React.FC<Props> = ({ RENDERS, setRender }) => {
             </button>
             <button 
                 className={`${className}_button`}
-                onClick={(e) => handleClick(e, 5)}
+                onClick={(e) => handleClick(e, 3)}
             >
-                All Models
+                Train
+            </button>
+            <button 
+                className={`${className}_button`}
+                onClick={(e) => handleClick(e, 2)}
+            >
+                Multiple Objects
+            </button>
+            <button 
+                className={`${className}_button`}
+                onClick={(e) => handleClick(e, 1)}
+            >
+                First Texture
+            </button>
+            <button 
+                className={`${className}_button`}
+                onClick={(e) => handleClick(e, 0)}
+            >
+                Hello World
             </button>
         </div>
     )
