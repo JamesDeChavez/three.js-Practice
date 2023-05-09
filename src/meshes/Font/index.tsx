@@ -7,15 +7,16 @@ extend({ TextGeometry })
 
 interface Props {
     text: string,
-    position: Vector3
+    position: Vector3,
+    size?: number
 }
 
 
-const Font: React.FC<Props> = ({text, position}) => {
+const Font: React.FC<Props> = ({text, position, size}) => {
     const font = new FontLoader().parse(MajorMonoDisplay)
     return (
         <mesh position={position} >
-            <textGeometry args={[text, {font, size: 1, height: 0.3}]} />
+            <textGeometry args={[text, {font, size: size ?? 1, height: 0.3}]} />
             <meshStandardMaterial color={'#FFFFFF'} />
         </mesh>
     )

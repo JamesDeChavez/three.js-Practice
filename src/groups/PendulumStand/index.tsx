@@ -1,8 +1,10 @@
 
-const FirstNameStand = () => {
+
+
+const PendulumStand = () => {
+    
     return (
         <group>
-
             <mesh position={[2.5, 5, 0.15]}>
                 <boxBufferGeometry args={[6, 0.1, 0.2]} />
                 <meshStandardMaterial color={'black'} />
@@ -16,7 +18,7 @@ const FirstNameStand = () => {
                 <boxBufferGeometry args={[0.2, 2.5, 0.1]} />
                 <meshStandardMaterial color={'black'} />
             </mesh>
-
+            
             <mesh position={[5.4, 5, -0.1]}>
                 <boxBufferGeometry args={[0.2, 0.1, 0.5]} />
                 <meshStandardMaterial color={'black'} />
@@ -51,4 +53,4 @@ const FirstNameStand = () => {
     )
 }
 
-export default FirstNameStand
+export default PendulumStand
