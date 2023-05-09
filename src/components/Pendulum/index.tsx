@@ -4,8 +4,11 @@ import { OrbitControls } from '@react-three/drei'
 import LastName from '../../groups/LastName'
 import FirstName from '../../groups/FirstName'
 import PendulumStand from '../../groups/PendulumStand'
+import Desk from '../../meshes/Desk'
+import HiCube from '../../meshes/HiCube'
+import ImCube from '../../meshes/ImCube'
+import Marble from '../../meshes/Marble'
 import './styles.css'
-import Font from '../../meshes/Font'
 import { Vector3 } from 'three'
 
 const SetCamera = () => {    
@@ -20,120 +23,18 @@ const Pendulum = () => {
         <div className={className}>
             <h2 className={`${className}_header`}>Pendulum Project</h2>
             <div className={`${className}_sceneContainer`} ref={root}>
-                <Canvas className={`${className}_canvas`} camera={{ position: [4, 4, 8] }}>
+                <Canvas className={`${className}_canvas`} camera={{ position: [5, 4, 10] }}>
                     <SetCamera />
                     <directionalLight position={[0, 7, 5]} intensity={1} />
                     <ambientLight intensity={0.3} />
-                    <OrbitControls />
+                    <Desk />
                     <FirstName root={root} />
                     <LastName root={root} />
                     <PendulumStand />
-                    <mesh>
-                        <boxBufferGeometry args={[100,0.1,100]} />
-                        <meshStandardMaterial color={'#141e30'} />
-                    </mesh>
-                    <group position={[-4, 3, 1.5]} rotation={[0, Math.PI/4.5, 0]} >
-                        <Font text={"hi!"} position={new Vector3(0.25, -0.25, 1)} size={0.5} />
-                        <mesh>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, 0, 0]}>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, 0, 1.8]}>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[0, 0, 1.8]}>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, -.9, 0]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, .9, 0]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, -.9, 1.8]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, .9, 1.8]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[0, 0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[0, -0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, 0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, -0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                    </group>
-                    <group position={[-4, 1, 2]} rotation={[0, Math.PI/3, 0]} >
-                        <Font text={"i'm"} position={new Vector3(0.1, -0.25, 1)} size={0.5} />
-                        <mesh>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, 0, 0]}>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, 0, 1.8]}>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[0, 0, 1.8]}>
-                            <boxBufferGeometry args={[0.2, 2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, -.9, 0]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, .9, 0]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, -.9, 1.8]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[.9, .9, 1.8]} >
-                            <boxBufferGeometry args={[2, 0.2, 0.2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[0, 0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[0, -0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, 0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                        <mesh position={[1.8, -0.9, 0.9]} >
-                            <boxBufferGeometry args={[0.2, 0.2, 2]} />
-                            <meshStandardMaterial color={'#243B55'} />
-                        </mesh>
-                    </group>
+                    <HiCube />
+                    <ImCube />
+                    <Marble position={new Vector3(-15, 1, 0)} />
+                    <Marble position={new Vector3(15, 1, -5)} />
                 </Canvas>
             </div>
         </div>

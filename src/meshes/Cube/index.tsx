@@ -1,5 +1,5 @@
 import { useTexture } from "@react-three/drei"
-import testTexture from '../../assets/uv-test-bw.png'
+import testTexture from '../../assets/desk.jpg'
 
 
 const Cube = () => {
