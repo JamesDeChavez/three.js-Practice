@@ -6,7 +6,7 @@ import MultipleObjects from './components/MultipleObjects'
 import TrainProject from './components/TrainProject'
 import BirdsProject from './components/BirdsProject'
 import AllModels from './components/AllModels'
-import Pendelum from './components/Pendelum'
+import Pendulum from './components/Pendulum'
 import './App.css'
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         [RENDERS[3]]: <TrainProject />,
         [RENDERS[4]]: <BirdsProject />,
         [RENDERS[5]]: <AllModels />,
-        [RENDERS[6]]: <Pendelum />
+        [RENDERS[6]]: <Pendulum />
       }[render]}
     </div>
   )

@@ -19,7 +19,7 @@ const NavButtons: React.FC<Props> = ({ RENDERS, setRender }) => {
                 className={`${className}_button`}
                 onClick={(e) => handleClick(e, 6)}
             >
-                Pendelum
+                Pendulum
             </button>
             <button 
                 className={`${className}_button`}
