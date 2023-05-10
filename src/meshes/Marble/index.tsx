@@ -1,7 +1,7 @@
 import { useTexture } from "@react-three/drei"
 import marbleTexture from '../../assets/metalTexture.jpg'
 import { Mesh, Vector3 } from "three"
-import { Power1, gsap } from "gsap"
+import { Bounce, Circ, gsap } from "gsap"
 import { useRef } from "react"
 
 interface Props {
@@ -14,8 +14,8 @@ const Marble: React.FC<Props> = ({ position }) => {
 
     const handleClick = () => {
         gsap.timeline()
-            .to(marbleRef.current!.position, { duration: 0.2, y: 3, ease: Power1.easeOut})
-            .to(marbleRef.current!.position, { duration: 0.2, y: 1, ease: Power1.easeIn})
+            .to(marbleRef.current!.position, { duration: 0.3, y: marbleRef.current!.position.y + 1, ease: Circ.easeOut})
+            .to(marbleRef.current!.position, { duration: 0.3, y: 1, ease: Bounce.easeOut})
     }
 
     return (

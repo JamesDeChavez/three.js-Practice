@@ -1,23 +1,24 @@
-import { FontLoader } from 'three/addons/loaders/FontLoader.js'
-import MajorMonoDisplay from '../../assets/Major Mono Display_Regular.json'
-import { extend } from "@react-three/fiber"
 import { Vector3 } from 'three'
-import { TextGeometry } from 'three/addons/geometries/TextGeometry.js'
-extend({ TextGeometry })
+import { Text3D } from '@react-three/drei'
 
 interface Props {
     text: string,
     position: Vector3,
-    size?: number
+    size?: number,
+    color?: string
 }
 
-
-const Font: React.FC<Props> = ({text, position, size}) => {
-    const font = new FontLoader().parse(MajorMonoDisplay)
+const Font: React.FC<Props> = ({text, position, size, color}) => {
     return (
         <mesh position={position} >
-            <textGeometry args={[text, {font, size: size ?? 1, height: 0.3}]} />
-            <meshStandardMaterial color={'#FFFFFF'} />
+            <Text3D 
+                font='/src/assets/Major Mono Display_Regular.json'
+                size={size ?? 1}
+                height={0.3}
+            >
+                {text}
+                <meshStandardMaterial color={color ?? '#FFFFFF'} />
+            </Text3D>            
         </mesh>
     )
 }

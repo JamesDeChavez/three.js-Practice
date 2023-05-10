@@ -17,6 +17,12 @@ const NavButtons: React.FC<Props> = ({ RENDERS, setRender }) => {
         <div className={className}>
             <button 
                 className={`${className}_button`}
+                onClick={(e) => handleClick(e, 7)}
+            >
+                3D Header
+            </button>
+            <button 
+                className={`${className}_button`}
                 onClick={(e) => handleClick(e, 6)}
             >
                 Pendulum
