@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import Font from '../../meshes/Font'
-import { Vector3 } from 'three'
+import Header3D from '../../groups/3dHeader'
 import './styles.css'
 
 const HeaderProject = () => {
@@ -12,13 +11,9 @@ const HeaderProject = () => {
             <div className={`${className}_sceneContainer`}>
                 <Canvas className={`${className}_canvas`} camera={{ position: [0, 0, 5]}} >
                     <OrbitControls enableZoom={false} />
-                    <ambientLight intensity={0.5} />
+                    <ambientLight intensity={0.1} />
                     <directionalLight position={[-1, 3, 3]} intensity={1} />
-                    <group>
-                        <Font text={'<'} position={new Vector3(-3.5, 0, 0)} color='#00C6BD' />
-                        <Font text={'About'} position={new Vector3(-2.5, 0, 0)} />
-                        <Font text={'/>'} position={new Vector3(2.5, 0, 0)} color='#00C6BD' />
-                    </group>
+                    <Header3D text={'contact'} />
                 </Canvas>
             </div>
         </div>
